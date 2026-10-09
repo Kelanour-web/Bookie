@@ -1,0 +1,406 @@
+body {
+    font-family: sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+.book {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 20px 10px 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.book button {
+    background: #c9a15a;
+    color: #2b1a0e;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    margin-bottom: 14px;
+}
+
+.book button:hover {
+    background: #e0b86e;
+}
+
+.book button:active {
+    transform: scale(0.95);
+}
+
+.library {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.book img {
+    width: 100%;
+    border-radius: 2px 6px 6px 2px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+#searchInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    background: #5a3a22;
+    color: #f3e5cf;
+}
+
+#searchInput::placeholder {
+    color: #c9b18a;
+}
+
+.book:hover {
+    transform: translateY(-4px);
+}
+
+.book h3 {
+    font-size: 15px;
+    margin: 12px 0 2px;
+}
+
+.book p {
+    font-size: 13px;
+    color: #c9b18a;
+    margin: 0 0 10px;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background: #3b2414;
+    font-family: Georgia, serif;
+    color: #f3e5cf;
+}
+
+.book::after,
+.slot::after {
+    content: '';
+    align-self: stretch;
+    height: 16px;
+    margin: 12px -10px 0;
+    background: linear-gradient(#a0693a, #6b4423);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+}
+
+#pdfPicker {
+    color: #c9b18a;
+    margin-bottom: 10px;
+}
+
+#pdfPicker::file-selector-button {
+    background: #c9a15a;
+    color: #2b1a0e;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.book:last-child:nth-child(odd) {
+    width: 100%;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.filter {
+    background: #5a3a22;
+    color: #f3e5cf;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+}
+
+.filter.active {
+    background: #c9a15a;
+    color: #2b1a0e;
+}
+
+.reader {
+    position: fixed;
+    inset: 0;
+    background: #1e120a;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.reader-body {
+    position: absolute;
+    inset: 0;
+    overflow: auto;
+}
+
+.bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: #3b2414;
+    z-index: 2;
+}
+
+.top-bar {
+    top: 0;
+    padding-top: calc(12px + env(safe-area-inset-top));
+}
+
+.bottom-bar {
+    bottom: 0;
+    padding-bottom: calc(12px + env(safe-area-inset-bottom));
+}
+
+.bar button,
+.menu-panel button,
+.menu-panel a {
+    background: #c9a15a;
+    color: #2b1a0e;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+#readerTitle {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#pageInfo {
+    white-space: nowrap;
+}
+
+#pageSlider {
+    flex: 1;
+    accent-color: #c9a15a;
+}
+
+.menu-panel {
+    position: absolute;
+    top: calc(64px + env(safe-area-inset-top));
+    right: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    background: #3b2414;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+#progressLine {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.15);
+    z-index: 1;
+}
+
+#progressFill {
+    height: 100%;
+    width: 0;
+    background: #c9a15a;
+}
+
+#pdfCanvas {
+    width: 100%;
+    display: block;
+}
+
+.text-view {
+    padding: 20px;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #f3e5cf;
+}
+
+.text-view.hidden {
+    display: none;
+}
+
+#emptyMessage {
+    color: #c9b18a;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.book .remove {
+    background: transparent;
+    color: #c9b18a;
+    font-size: 13px;
+    padding: 4px 8px;
+}
+
+.book .remove:hover {
+    background: transparent;
+    text-decoration: underline;
+}
+
+.slot {
+    min-height: 200px;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 20px 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.progress {
+    width: 80%;
+    margin: 4px auto 10px;
+}
+
+.progress-track {
+    height: 5px;
+    background: #5a3a22;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #c9a15a;
+}
+
+.progress span {
+    display: block;
+    font-size: 12px;
+    color: #c9b18a;
+    margin-top: 4px;
+}
+
+.reader {
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.reader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.9);
+    pointer-events: none;
+}
+
+.bar {
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s;
+}
+
+.top-bar.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.bottom-bar.hidden {
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu-panel {
+    transform-origin: top right;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.menu-panel.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.9);
+}
+
+#pdfCanvas {
+    transition: opacity 0.4s ease;
+}
+
+/* ===== Startup animation ===== */
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.8) translateY(20px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+main h2        { animation: fadeDown 0.6s ease backwards; }
+#pdfPicker     { animation: fadeUp 0.5s ease 0.15s backwards; }
+#searchInput   { animation: fadeUp 0.5s ease 0.3s backwards; }
+#emptyMessage  { animation: fadeUp 0.5s ease 0.45s backwards; }
+.library       { animation: fadeUp 0.7s ease 0.5s backwards; }
+
+.book.new { animation: popIn 0.4s ease backwards; }
+
+@media (prefers-reduced-motion: reduce) {
+    main h2, #pdfPicker, #searchInput, #emptyMessage, .library, .book.new {
+        animation: none;
+    }
+}
+
+.reader {
+    --reader-bg: #1e120a;
+    --reader-text: #f3e5cf;
+    --page-filter: none;
+    background: var(--reader-bg);
+}
+
+.reader.theme-dark {
+    --reader-bg: #0f0f0f;
+    --reader-text: #d8d8d8;
+    --page-filter: invert(0.9) hue-rotate(180deg);
+}
+
+.reader.theme-sepia {
+    --reader-bg: #f1e4c8;
+    --reader-text: #4a3828;
+    --page-filter: sepia(0.4);
+}
+
+.reader.theme-light {
+    --reader-bg: #ffffff;
+    --reader-text: #1a1a1a;
+    --page-filter: none;
+}
+
+#pdfCanvas {
+    filter: var(--page-filter);
+}
+
+.text-view {
+    color: var(--reader-text);
+}
